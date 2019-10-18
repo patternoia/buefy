@@ -1,6 +1,7 @@
 <template>
     <div v-if="attached && closable" class="tags has-addons">
-        <span
+        <spans
+            @click="() => console.log('a')"
             class="tag"
             :class="[type, size, { 'is-rounded': rounded }]">
             <span :class="{ 'has-ellipsis': ellipsis }">
@@ -19,6 +20,7 @@
         />
     </div>
     <span
+        @click="() => console.log('b')"
         v-else
         class="tag"
         :class="[type, size, { 'is-rounded': rounded }]">
